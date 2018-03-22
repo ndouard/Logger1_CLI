@@ -1,14 +1,9 @@
 /*
  * main.cpp
- *
- *  Created on: 21 Jul 2012
- *      Author: thomas
  */
 
 #ifndef MAIN_H_
 #define MAIN_H_
-
-
 
 #include <locale>
 #include <string>
@@ -63,14 +58,12 @@ int main(int argc, char **argv)
 {
     Logger * logger = new Logger();
 	
-	
 	  if ( argc != 5 ) 
     cout<<"usage: "<< argv[0] <<" --duration X --destination '/absolute/path/to/file.klg'\n";
   else {
 	int duration = atoi(argv[2]) ;
 	string path =  argv[4] ;
-	time_t end = time(NULL) + duration;
-		
+	time_t end = time(NULL) + duration;	
 	
 	    if(path == "")
         {
